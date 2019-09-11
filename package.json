@@ -1,0 +1,14 @@
+{
+  "name": "employees",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "concurrently --kill-others \"cd ./backend && npm start\" \"cd ./frontend && npm start\""
+  },
+  "author": "kuzmo",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.2"
+  }
+}

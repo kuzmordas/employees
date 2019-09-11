@@ -1,0 +1,29 @@
+<div class="employees">
+  <h1>Сотрудники</h1>
+  <input
+    placeholder="поиск"
+    class="employees__search"
+    type='text'
+    ng-model="$ctrl.searchName"
+    ng-change="$ctrl.onSearch()"
+    ng-model-options="{ debounce: 500 }"
+  >
+  <ul class="employees__list">
+    <li class="employees__list-item list-item" ng-repeat="employee in $ctrl.employees">
+      <p class="list-item__name">{{employee.name}}</p>
+      <button class="list-item__delete-button" ng-click="$ctrl.onDeleteEmployee(employee._id)">
+          <i class="fa fa-times" style="font-size:24px;color:gray"></i>
+      </button>
+    </li>
+  </ul>
+  <div class="employees__control-wrapper">
+    <input
+      placeholder="Введите имя сотрудника..."
+      class="employees__new-employee-input"
+      type='text'
+      ng-model='$ctrl.newEmployee'
+    >
+    <button class="employees__add-button" ng-click="$ctrl.onAddNewEmployee()">добавить</button>
+  </div>
+</div>
+

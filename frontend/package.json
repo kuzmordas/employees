@@ -1,0 +1,23 @@
+{
+  "name": "employees-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run copy-libs",
+    "update-deps": "npm update",
+    "postupdate-deps": "npm run copy-libs",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*}/**/*\" app/lib -C",
+    "prestart": "npm install",
+    "start": "live-server ./app --host localhost --port 8000"
+  },
+  "author": "kuzmo",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.7.x"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "live-server": "^1.2.1"
+  }
+}
