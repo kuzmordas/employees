@@ -14,7 +14,7 @@
   "author": "kuzmo",
   "license": "ISC",
   "dependencies": {
-    "angular": "1.7.x"
+    "angular": "1.8.x"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
